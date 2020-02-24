@@ -1,0 +1,10 @@
+<h1>id:
+<%= @task.id%>
+のしょうさい
+</h1>
+<p>
+<%= @task.content %>    
+</p>
+<%= link_to 'もどる', tasks_path%>
+<%= link_to 'へんしゅう',edit_task_path(@task) %>
+<%= link_to 'さくじょ', @message,method: :delate, data: {confirm: '本当に消す？'} %>

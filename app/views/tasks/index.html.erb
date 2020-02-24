@@ -1,0 +1,12 @@
+<h1>たすく一覧</h1>
+<ul>
+    <% @tasks.each do |task| %>
+    <li>
+        <%= link_to task.id,task%>
+        :
+        <%= task.content %>
+    </li>
+    <%end%>
+</ul>
+
+<%= link_to 'たすくの追加' ,new_task_path %>
