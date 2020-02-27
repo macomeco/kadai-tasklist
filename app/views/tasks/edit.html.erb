@@ -2,9 +2,5 @@
 <%= @task.id%>
 のへんしゅうぺーじ
 </h1>
-<%=form_with(model: @task, local:true) do |f| %>
-<%= f.label :content,'たすく' %>
-<%= f.text_field :content%>
-<%=f.submit 'とうこう' %>
-<%end%>
-<%=link_to 'もどる', tasks_path %>
+<%= render 'form', task: @task %>
+<%= link_to 'もどる', tasks_path %>
