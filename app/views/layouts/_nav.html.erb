@@ -1,0 +1,9 @@
+<ul>
+    <% if logged_in? %>
+    <li><%= current_user.name %></li>
+    <li><%= link_to 'ろぐあうと', logout_path, method: :delete %></li>
+    <%else%>
+    <li><%= link_to 'さいんあっぷ', signup_path %></li>
+    <li><%= link_to 'ろぐいん', login_path %></li>
+    <%end%>
+</ul>
