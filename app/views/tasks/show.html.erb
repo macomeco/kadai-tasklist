@@ -11,7 +11,6 @@
     <%= @task.status %>
 </p>
 
-
 <%= link_to 'もどる', tasks_path%>
 <%= link_to 'へんしゅう',edit_task_path(@task) %>
 <%= link_to 'さくじょ', @message, method: :delete, data: {confirm: '本当に消す？'} %>
