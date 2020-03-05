@@ -47,7 +47,6 @@ class TasksController < ApplicationController
 
     def destroy
         @task.destroy
-        
         flash[:success] = 'さくじょしたよ'
         redirect_to tasks_url
     end
@@ -55,7 +54,7 @@ class TasksController < ApplicationController
     private
     
     def set_task
-        @task = Task.find(params[:id])
+        @task = current_user.tasks.find_by(params[:id])
     end
     
     def task_params
