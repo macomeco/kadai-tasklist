@@ -21,6 +21,7 @@ class UsersController < ApplicationController
       render :new
     end
   end
+  
   #ゆーざーの情報をしゅとく！
   private
   def user_params
