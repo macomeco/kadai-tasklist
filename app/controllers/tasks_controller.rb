@@ -35,6 +35,7 @@ class TasksController < ApplicationController
     end
     
     def update
+        @task = current_user.tasks.build(task_params)
         if @task.update(task_params)
             flash[:success] = 'こうしんしたよ'
             redirect_to @task
