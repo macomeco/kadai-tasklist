@@ -35,7 +35,7 @@ class TasksController < ApplicationController
     end
     
     def update
-        @task = current_user.tasks.find_by(id: params[:id])
+        #@task = current_user.tasks.find_by(id: params[:id])
         if @task.update(task_params)
             flash[:success] = 'こうしんしたよ'
             redirect_to @task
